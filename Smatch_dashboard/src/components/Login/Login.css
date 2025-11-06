@@ -1,0 +1,66 @@
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.h-custom {
+height: calc(100% - 73px);
+}
+.form-welcome{
+    color: #fffcfc;
+    margin-bottom: 70px;
+}
+.form-welcome h1{
+    font-size: 3rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 700;
+}
+.form-label{
+    color: #888;
+}
+
+.form-welcome p{
+    font-size: 1.2rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.container{
+    background-color: #1e1e32 ;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-fluid{
+    width: 90vw;
+    height: 80vh;
+    border-radius: 20px;
+}
+
+
+/* From Uiverse.io by krlozCJ */ 
+.btn-login {
+    border: none;
+    outline: none;
+    background-color: #ff6f61;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 5px;
+    transition: all ease 0.1s;
+    box-shadow: 0px 5px 0px 0px #974740;
+    
+  }
+  
+  .btn-login:active {
+    transform: translateY(5px);
+    box-shadow: 0px 0px 0px 0px #edbc7c;
+  }
+
+@media (max-width: 450px) {
+.h-custom {
+height: 100%;
+}
+}
