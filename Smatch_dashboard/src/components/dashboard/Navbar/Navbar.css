@@ -1,0 +1,123 @@
+/* Theme variables */
+:root {
+    --primary-color: #4361ee;
+    --primary-hover: #3a56d4;
+    --accent-color: #f72585;
+    --light-bg: #f8f9fa;
+    --dark-text: #333;
+    --light-text: #f8f9fa;
+    --border-radius: 10px;
+    --box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+.navbar-dark .nav-item .nav-link {
+    color: var(--light-text);
+}
+
+.navbar-dark .nav-item .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+    border-radius: 0.25rem;
+    color: var(--light-text);
+}
+
+.fa-li {
+    position: relative;
+    left: 0;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: linear-gradient(135deg, rgba(230, 230, 230, 0.9), rgba(200, 200, 200, 0.9));
+    border-radius: 0 0 10px 10px;
+    box-shadow: var(--box-shadow);
+}
+
+.dropdown-menu {
+    min-width: 200px;
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    background-color: var(--light-bg);
+}
+
+.dropdown-item {
+    color: var(--dark-text);
+    padding: 0.5rem 1rem;
+    transition: var(--transition);
+}
+
+.dropdown-item:hover {
+    background-color: rgba(67, 97, 238, 0.1);
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.dropdown-item.header {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* Animations */
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-down {
+    animation: slideDown 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.7s ease forwards;
+}
+
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.fade-in-scale {
+    animation: fadeInScale 0.3s ease forwards;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .fixed-top {
+        border-radius: 0;
+    }
+
+    .dropdown-menu {
+        min-width: 150px;
+    }
+
+    .dropdown-item {
+        font-size: 0.9rem;
+    }
+}
